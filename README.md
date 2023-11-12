@@ -1,8 +1,8 @@
 1.1. instruction for running the app 
 
-    a. using visual studio code or any same environment, open folder laravel-docker-todo 
-    
-    b. open terminal and run 
+    a. download zip file on git hub, rename folder to laravel-docker-todo
+    b. using visual studio code or any same environment, open folder laravel-docker-todo     
+    c. open terminal and run 
        - docker-compose build 
        - docker-compose up
        - docker exec laravel-doc-apps bash -c "php artisan migrate"
