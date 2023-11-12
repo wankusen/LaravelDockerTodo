@@ -1,0 +1,23 @@
+services:
+  laravel-docker-todo:
+    container_name: laravel-doc-apps
+    build: .
+    volumes:
+      - ./syazwantodotest:/var/www/html
+    ports:
+      - 8000:80
+  
+  mysql_db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: databasetododb
+    ports:
+    - 3306:3306
+  
+  phpmyadmin:
+    image: phpmyadmin:latest
+    ports:
+      - 8001:80
+    environment:
+      - PMA_ARBITRARY=1
